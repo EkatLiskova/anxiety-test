@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Login Form | CodingLab</title> -->
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  </head>
+  <body>
+    <div id="header">
+        <img class="header_logo" src="{% static "logo.png" %}" width="72" height="72">
+        <span class="header_title" >Сервис оценки психологического здоровья</span>
+    </div>
+    <div class="container">
+      <div class="wrapper">
+         
+        <div class="title"><span>Авторизация</span></div>
+        <form action= {% url 'profile' %}>
+          <div class="row">
+            
+            <input type="text" placeholder="user@yandex.ru" required>
+          </div>
+          <div class="row">
+            
+            <input type="password" placeholder="**********" required>
+          </div>
+          
+          <div class="row button">
+            <input type="submit" value="Войти">
+          </div>
+	  <div class="pass"><a href="#">Забыли пароль?</a></div>
+          <div class="signup-link"><a href="#">Зарегистрироваться</a></div>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Личный кабинет</title> -->
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  </head>
+  <body>
+<!-- Side navigation -->
+<div class="sidenav">
+  <img class="avatar" src="{% static "avatar.jpg" %}" width="172" height=auto>
+  <span>Венская Ирина Степановна</span>
+  <span>СМП</span>
+  <span>ПГНИУ</span>
+</div>
+    <div id="header">
+        <img class="header_logo" src="{% static "logo.png" %}" width="72" height="72">
+        <span class="header_title" >Сервис оценки психологического здоровья</span>
+    </div>
+    
+
+  </body>
+</html>
