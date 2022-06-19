@@ -24,24 +24,20 @@
 
   <div class="under_header" >
 
-  <h3>Тесты доступные для вашего прохождения:</h3>
+  <h3>Результат прохождения теста:</h3>
 
   </div>
 
 
-      {% for one_test in data_set %}
 
 
-  <div class="sapectrum-okolumanit test_var" onclick='location.href="{% url 'quiz' %}";'>
 
-  <h3>{{ one_test.name}}</h3>
+  <div class="sapectrum-okolumanit" onclick='location.href="{% url 'profile' %}";'>
 
-  <div class="test_progress" style="float: right">
-      <h3>{{ one_test.progress}}</h3>
-  </div>
+  <h3>{{ data_set}}</h3>
 
   </div>
-      {% endfor %}
+
       </div>
     
 

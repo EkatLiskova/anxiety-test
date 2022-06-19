@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Личный кабинет</title> -->
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  </head>
+  <body>
+<!-- Side navigation -->
+<div class="sidenav">
+  <img class="avatar" src="{% static "avatar.jpg" %}" width="172" height=auto>
+  <span>Венская Ирина Степановна</span>
+  <span>СМП</span>
+  <span>ПГНИУ</span>
+</div>
+    <div id="header">
+        <img class="header_logo" src="{% static "logo.png" %}" width="72" height="72">
+        <span class="header_title" >Сервис оценки психологического здоровья</span>
+    </div>
+  <div class="all_tests">
+
+  <div class="under_header" style="margin-bottom: 60px;" >
+
+  <h3>Тест Спилбергера-Ханина</h3>
+
+  </div>
+
+
+
+
+  <div class="sapectrum-okolumanit" >
+
+  <h3>{{ data_set.progress_bar }}{{ data_set.question}}</h3>
+
+      {% for answer in data_set.answers %}
+
+
+{#  <div class="sapectrum-okolumanit" onclick='location.href="{% url 'quiz' %}";'>#}
+{##}
+{#  <h3>{{ answer.text}}</h3>#}
+{##}
+{#  </div>#}
+
+           <form method="POST" action="write_choise/">
+            {% csrf_token %}
+          <div >
+            <input class="answer_button" type="submit" name="answer{{answer.number}}" value="{{ answer.text }}">
+          </div>
+
+        </form>
+
+
+      {% endfor %}
+
+  </div>
+      </div>
+<form method="POST" action="write_choise/">
+            {% csrf_token %}
+    <div class="bottom_navbar">
+        <div >
+            <input class="nav_button" type="submit" name="home" value="Вернуться к списку тестов">
+          </div>
+
+        <div >
+            <input class="nav_button" type="submit" name="clear" value="Сбросить прогресс опроса">
+          </div>
+    </div>
+</form>
+
+  </body>
+</html>

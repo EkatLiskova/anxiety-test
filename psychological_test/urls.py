@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from quiz.views import QuizList, AnswerWizard, login, home, profile
+from quiz.views import quiz, login, home, profile, write_choise, result
 
 urlpatterns = [
     path('', home),
-    path('profile/64/', profile, name="profile"),
-    path('login/', login),
+    path('profile/1/', profile, name="profile"),
+    path('login/', login, name="login"),
     path('admin/', admin.site.urls),
-    path('tests/', QuizList.as_view(),),
-    path('quiz/<q_id>', AnswerWizard.as_view())
+    path('quiz/', quiz, name="quiz"),
+    path('quiz/write_choise/', write_choise, name="write_choise"),
+    path('result/', result, name="result")
+
 ]
