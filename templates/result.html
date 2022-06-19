@@ -39,7 +39,19 @@
   </div>
 
       </div>
-    
+
+  <form method="POST" action="/write_choise/">
+            {% csrf_token %}
+    <div class="bottom_navbar">
+        <div >
+            <input class="nav_button" type="submit" name="home" value="Вернуться к списку тестов">
+          </div>
+
+        <div >
+            <input class="nav_button" type="submit" name="clear" value="Сбросить прогресс опроса">
+          </div>
+    </div>
+</form>
 
   </body>
 </html>

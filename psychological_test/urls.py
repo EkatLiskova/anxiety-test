@@ -23,7 +23,7 @@ urlpatterns = [
     path('login/', login, name="login"),
     path('admin/', admin.site.urls),
     path('quiz/', quiz, name="quiz"),
-    path('quiz/write_choise/', write_choise, name="write_choise"),
+    path('write_choise/', write_choise, name="write_choise"),
     path('result/', result, name="result")
 
 ]

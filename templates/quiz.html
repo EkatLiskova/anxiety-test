@@ -44,7 +44,7 @@
 {##}
 {#  </div>#}
 
-           <form method="POST" action="write_choise/">
+           <form method="POST" action="/write_choise/">
             {% csrf_token %}
           <div >
             <input class="answer_button" type="submit" name="answer{{answer.number}}" value="{{ answer.text }}">
