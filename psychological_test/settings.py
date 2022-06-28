@@ -91,10 +91,10 @@ WSGI_APPLICATION = 'psychological_test.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'df7b4okteoj6s8',
-        'USER': 'sszslfwvbbqhxh',
-        'PASSWORD': '16da277e9c5dc390048158aea65bf72c1dadc5d086d56d9bdf8df9be140242ae',
-        'HOST': 'ec2-63-32-248-14.eu-west-1.compute.amazonaws.com',
+        'NAME': 'd41rjt7sq89p66',
+        'USER': 'tsybwgrcsoisqt',
+        'PASSWORD': '0b984b8691a9ff4eefb59739e7d025ee2cd400655ac012c04bbbe8b57fa15ea9',
+        'HOST': 'ec2-54-155-110-181.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }

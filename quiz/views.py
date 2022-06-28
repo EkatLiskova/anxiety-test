@@ -74,6 +74,7 @@ def write_choise(request):
     if request.method == "POST":
         test = Test.objects.get(id=1)
         interview = Interview.objects.get(test_id=test.id, profile_id=1)
+
         current_question = interview.progress
         try:
             if request.POST.get("answer1"):
@@ -87,6 +88,7 @@ def write_choise(request):
             elif request.POST.get("home"):
                 return HttpResponseRedirect("/profile/1/")
             elif request.POST.get("clear"):
+
                 interview.progress = 1
                 interview.save()
                 Choices.objects.filter(interview_id=interview.id).delete()
